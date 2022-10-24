@@ -42,7 +42,7 @@ void driver(string inFile)
     int *asciiOne = new int[asciiSize]{0};
 
     // initiate small dynamic array
-    stack<string> zeroData, oneData, twoData, threeData, fourData, fiveData, sixData, sevenData, eightData, nineData, tenData,
+    stack<string> zeroData, oneData, twoData, threeData, fourData, fiveData, sixData, sevenData, eightData, nineData,
         aData, bData, cData, dData, eData, fData, gData, hData, iData, jData, kData, lData, mData, nData, oData, pData, qData, rData, sData, tData, uData, vData, wData, xData, yData, zData;
 
     // copy data from big array to smaller array
@@ -82,9 +82,6 @@ void driver(string inFile)
             break;
         case 57:
             nineData.push(fileData[i]);
-            break;
-        case 58:
-            tenData.push(fileData[i]);
             break;
         case 65:
             aData.push(fileData[i]);
@@ -345,20 +342,7 @@ void driver(string inFile)
             }
         });
 
-    // move 10
-    thread tenThread(
-        [&]
-        {
-            while (!tenData.empty())
-            {
-                int asciiValue = int(tenData.top()[0]);
-                int indexValue = asciiTwo[asciiValue];
 
-                fileData[indexValue] = tenData.top();
-                asciiTwo[asciiValue] += 1;
-                tenData.pop();
-            }
-        });
 
     // move a
     thread aThread(
@@ -760,7 +744,6 @@ void driver(string inFile)
     sevenThread.join();
     eightThread.join();
     nineThread.join();
-    tenThread.join();
     aThread.join();
     bThread.join();
     cThread.join();
@@ -798,12 +781,12 @@ int main()
     cout << "1k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1k.txt");
+        driver("1k.txt");
     }
     cout << "10k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../10k.txt");
+        driver("10k.txt");
     }
     cout << "100k" << endl;
     for (size_t i = 0; i < 10; i++)
@@ -813,7 +796,7 @@ int main()
     cout << "1m" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1m.txt");
+        driver("1m.txt");
     }
     /*
     cout << "2m" << endl;
