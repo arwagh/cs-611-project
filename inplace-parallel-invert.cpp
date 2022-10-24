@@ -1006,22 +1006,22 @@ int main()
     cout << "1k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1k.txt");
+        driver("1k.txt");
     }
     cout << "10k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../10k.txt");
+        driver("10k.txt");
     }
     cout << "100k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../100k.txt");
+        driver(100k.txt");
     }
     cout << "1m" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1m.txt");
+        driver("1m.txt");
     }
     /*
     cout << "2m" << endl;
