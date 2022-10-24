@@ -742,22 +742,22 @@ int main()
     cout << "1k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1k_2ed_dataset.txt");
+        driver("1k_2ed_dataset.txt");
     }
     cout << "10k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../10k_2ed_dataset.txt");
+        driver("10k_2ed_dataset.txt");
     }
     cout << "100k" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../100k_2ed_dataset.txt");
+        driver("100k_2ed_dataset.txt");
     }
     cout << "1m" << endl;
     for (size_t i = 0; i < 10; i++)
     {
-        driver("../1m_2ed_dataset.txt");
+        driver("1m_2ed_dataset.txt");
     }
     /*
     cout << "2m" << endl;
